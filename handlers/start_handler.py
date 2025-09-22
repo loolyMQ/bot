@@ -1,45 +1,66 @@
 from aiogram import Router, F
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import CommandStart
-from aiogram.utils.keyboard import InlineKeyboardBuilder
-
-from messages import BotMessages
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
 from container import ContainerFactory
+from messages import BotMessages
 from interfaces import IUserService
+
 
 router = Router()
 
 
-def welcome_keyboard() -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    builder.add(
-        InlineKeyboardButton(
-            text=BotMessages.START_BUTTON,
-            callback_data="start"
-        )
-    )
-    builder.adjust(1)
-    return builder.as_markup()
+class StartStates(StatesGroup):
+    waiting_for_name = State()
 
 
-@router.message(CommandStart)
-async def start_command(msg: Message):
+@router.message(CommandStart())
+async def handle_start_command(message: Message, state: FSMContext):
     try:
+        user_id = message.from_user.id
+        username = message.from_user.username
+        first_name = message.from_user.first_name
+        last_name = message.from_user.last_name
+        
         container = await ContainerFactory.create_container()
         user_service = container.get(IUserService)
         
-        user = await user_service.get_or_create_user(
-            user_id=msg.from_user.id,
-            username=msg.from_user.username,
-            first_name=msg.from_user.first_name,
-            last_name=msg.from_user.last_name
-        )
+        user = await user_service.get_or_create_user(user_id=user_id)
         
-        await msg.answer(
-            text=BotMessages.WELCOME_MESSAGE,
-            reply_markup=welcome_keyboard()
+        if user:
+            welcome_keyboard = InlineKeyboardMarkup(
+                inline_keyboard=[
+                    [InlineKeyboardButton(text=BotMessages.START_BUTTON, callback_data="start_bot")]
+                ]
+            )
+            
+            await message.answer(
+                BotMessages.WELCOME_MESSAGE,
+                reply_markup=welcome_keyboard
+            )
+        else:
+            await message.answer(BotMessages.ERROR_OCCURRED)
+            
+    except Exception as e:
+        print(f"Error in start handler: {e}")
+        await message.answer(BotMessages.ERROR_OCCURRED)
+
+
+@router.callback_query(F.data == "start_bot")
+async def handle_start_bot_callback(callback_query, state: FSMContext):
+    try:
+        await callback_query.answer()
+        await callback_query.message.edit_text(
+            BotMessages.WELCOME_MESSAGE,
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[
+                    [InlineKeyboardButton(text=BotMessages.BUY_MESSAGES, callback_data="buy_messages")],
+                    [InlineKeyboardButton(text=BotMessages.INVITE_FRIEND, callback_data="invite_friend")],
+                    [InlineKeyboardButton(text=BotMessages.OPEN_APP, callback_data="open_app")]
+                ]
+            )
         )
     except Exception as e:
-        print(f"Error sending start message: {e}")
-        await msg.answer(BotMessages.ERROR_OCCURRED)
-
+        print(f"Error in callback handler: {e}")
+        await callback_query.answer(BotMessages.ERROR_OCCURRED)

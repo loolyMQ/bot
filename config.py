@@ -9,9 +9,9 @@ class BotSettings(BaseSettings):
 
 
 class DatabaseSettings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="DB_", env_file=".env", env_file_encoding="utf-8", extra='ignore')
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra='ignore')
     
-    HOST: str = "localhost"
+    HOST: str = "postgres"
     PORT: int = 5432
     NAME: str = "arcana_bot"
     USER: str = "postgres"
@@ -23,9 +23,9 @@ class DatabaseSettings(BaseSettings):
 
 
 class RedisSettings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="REDIS_", env_file=".env", env_file_encoding="utf-8", extra='ignore')
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra='ignore')
     
-    HOST: str = "localhost"
+    HOST: str = "redis"
     PORT: int = 6379
     
     @property
@@ -43,7 +43,7 @@ class OpenAISettings(BaseSettings):
 
 
 class AppSettings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="APP_", env_file=".env", env_file_encoding="utf-8", extra='ignore')
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra='ignore')
     
     WEBAPP_URL: str = "https://e696722740d6733ce8592753b9c29d4c.serveo.net"
     DEFAULT_BALANCE: int = 10
@@ -68,5 +68,3 @@ class Settings:
 
 
 settings = Settings()
-
-

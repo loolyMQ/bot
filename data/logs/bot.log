@@ -1,0 +1,73 @@
+2025-09-22 01:21:33,787 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:21:33,830 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:21:34,086 - aiogram.event - INFO - Update id=991863873 is handled. Duration 207 ms by bot id=8429268456
+2025-09-22 01:21:49,179 - aiogram.event - INFO - Update id=991863874 is handled. Duration 58 ms by bot id=8429268456
+2025-09-22 01:21:50,281 - aiogram.event - INFO - Update id=991863875 is handled. Duration 63 ms by bot id=8429268456
+2025-09-22 01:22:38,438 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:22:38,439 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:22:38,443 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:23:02,688 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:23:02,736 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:23:06,832 - aiogram.event - INFO - Update id=991863876 is handled. Duration 195 ms by bot id=8429268456
+2025-09-22 01:23:07,896 - aiogram.event - INFO - Update id=991863877 is handled. Duration 123 ms by bot id=8429268456
+2025-09-22 01:23:08,770 - aiogram.event - INFO - Update id=991863878 is handled. Duration 254 ms by bot id=8429268456
+2025-09-22 01:24:40,887 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:24:40,888 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:24:40,888 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:24:53,142 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:24:53,191 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:24:59,176 - aiogram.event - INFO - Update id=991863879 is handled. Duration 240 ms by bot id=8429268456
+2025-09-22 01:25:00,241 - aiogram.event - INFO - Update id=991863880 is handled. Duration 101 ms by bot id=8429268456
+2025-09-22 01:25:00,948 - aiogram.event - INFO - Update id=991863881 is handled. Duration 126 ms by bot id=8429268456
+2025-09-22 01:25:45,759 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:25:45,760 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:25:45,760 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:25:50,235 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:25:50,279 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:25:53,528 - aiogram.event - INFO - Update id=991863882 is handled. Duration 203 ms by bot id=8429268456
+2025-09-22 01:25:54,253 - aiogram.event - INFO - Update id=991863883 is handled. Duration 91 ms by bot id=8429268456
+2025-09-22 01:26:35,718 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:26:35,719 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:26:35,719 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:27:56,271 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:27:56,317 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:27:56,525 - aiogram.event - INFO - Update id=991863884 is handled. Duration 143 ms by bot id=8429268456
+2025-09-22 01:27:56,537 - aiogram.event - INFO - Update id=991863885 is handled. Duration 154 ms by bot id=8429268456
+2025-09-22 01:28:00,546 - aiogram.event - INFO - Update id=991863886 is handled. Duration 122 ms by bot id=8429268456
+2025-09-22 01:28:01,387 - aiogram.event - INFO - Update id=991863887 is handled. Duration 104 ms by bot id=8429268456
+2025-09-22 01:28:02,265 - aiogram.event - INFO - Update id=991863888 is handled. Duration 177 ms by bot id=8429268456
+2025-09-22 01:28:35,312 - aiogram.event - INFO - Update id=991863889 is handled. Duration 62 ms by bot id=8429268456
+2025-09-22 01:29:38,337 - aiogram.event - INFO - Update id=991863890 is handled. Duration 56 ms by bot id=8429268456
+2025-09-22 01:29:39,060 - aiogram.event - INFO - Update id=991863891 is handled. Duration 67 ms by bot id=8429268456
+2025-09-22 01:30:45,439 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:30:45,440 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:30:45,440 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:30:57,446 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:30:57,493 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:30:57,797 - aiogram.event - INFO - Update id=991863892 is handled. Duration 254 ms by bot id=8429268456
+2025-09-22 01:30:58,855 - aiogram.event - INFO - Update id=991863893 is handled. Duration 101 ms by bot id=8429268456
+2025-09-22 01:30:59,589 - aiogram.event - INFO - Update id=991863894 is handled. Duration 114 ms by bot id=8429268456
+2025-09-22 01:31:00,316 - aiogram.event - INFO - Update id=991863895 is handled. Duration 98 ms by bot id=8429268456
+2025-09-22 01:32:06,591 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:32:06,592 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:32:06,592 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:32:18,627 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:32:18,676 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:32:19,053 - aiogram.event - INFO - Update id=991863896 is handled. Duration 322 ms by bot id=8429268456
+2025-09-22 01:32:20,237 - aiogram.event - INFO - Update id=991863897 is handled. Duration 105 ms by bot id=8429268456
+2025-09-22 01:32:20,950 - aiogram.event - INFO - Update id=991863898 is handled. Duration 109 ms by bot id=8429268456
+2025-09-22 01:32:21,585 - aiogram.event - INFO - Update id=991863899 is handled. Duration 98 ms by bot id=8429268456
+2025-09-22 01:33:02,077 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-22 01:33:02,078 - aiogram.dispatcher - INFO - Polling stopped for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:33:02,078 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-22 01:33:22,205 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 01:33:22,249 - aiogram.dispatcher - INFO - Run polling for bot @arcanatarobbot id=8429268456 - 'Arcana'
+2025-09-22 01:33:29,642 - aiogram.event - INFO - Update id=991863900 is handled. Duration 228 ms by bot id=8429268456
+2025-09-22 01:33:31,851 - aiogram.event - INFO - Update id=991863901 is handled. Duration 113 ms by bot id=8429268456
+2025-09-22 01:33:35,106 - aiogram.event - INFO - Update id=991863902 is handled. Duration 106 ms by bot id=8429268456
+2025-09-22 01:33:45,315 - aiogram.event - INFO - Update id=991863903 is handled. Duration 101 ms by bot id=8429268456
+2025-09-22 01:33:47,461 - aiogram.event - INFO - Update id=991863904 is handled. Duration 134 ms by bot id=8429268456
+2025-09-22 01:33:48,731 - aiogram.event - INFO - Update id=991863905 is not handled. Duration 0 ms by bot id=8429268456
+2025-09-22 01:34:00,047 - aiogram.event - INFO - Update id=991863906 is handled. Duration 91 ms by bot id=8429268456
+2025-09-22 01:34:01,457 - aiogram.event - INFO - Update id=991863907 is handled. Duration 109 ms by bot id=8429268456
+2025-09-22 01:34:03,028 - aiogram.event - INFO - Update id=991863908 is handled. Duration 115 ms by bot id=8429268456
