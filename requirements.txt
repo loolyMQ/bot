@@ -1,0 +1,18 @@
+# Core dependencies
+aiogram>=3.4.0
+pydantic>=2.5.0
+pydantic-settings>=2.10.1
+
+# Database
+asyncpg>=0.29.0
+sqlalchemy>=2.0.0
+alembic>=1.13.0
+
+# Caching
+redis>=5.0.0
+
+# AI/ML
+openai>=1.0.0
+
+# Utilities
+python-dotenv>=1.0.0

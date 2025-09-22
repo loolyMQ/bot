@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: arcana_bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - SECRET_KEY=${SECRET_KEY}
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/arcana_bot
+      - REDIS_URL=redis://redis:6379
+      - WEBAPP_URL=${WEBAPP_URL}
+      - DEFAULT_BALANCE=${DEFAULT_BALANCE}
+      - REFERRAL_BONUS=${REFERRAL_BONUS}
+      - LOG_LEVEL=${LOG_LEVEL}
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./data/logs:/app/data/logs
+    networks:
+      - arcana_network
+
+  postgres:
+    image: postgres:15
+    container_name: arcana_postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=arcana_bot
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - arcana_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: arcana_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - arcana_network
+
+volumes:
+  postgres_data:
+
+networks:
+  arcana_network:
+    driver: bridge
