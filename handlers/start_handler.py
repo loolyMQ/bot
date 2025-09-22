@@ -31,12 +31,14 @@ async def handle_start_command(message: Message, state: FSMContext):
         if user:
             welcome_keyboard = InlineKeyboardMarkup(
                 inline_keyboard=[
-                    [InlineKeyboardButton(text=BotMessages.START_BUTTON, callback_data="start_bot")]
+                    [InlineKeyboardButton(text=BotMessages.BUY_MESSAGES, callback_data="buy_messages")],
+                    [InlineKeyboardButton(text=BotMessages.INVITE_FRIEND, callback_data="invite_friend")],
+                    [InlineKeyboardButton(text=BotMessages.OPEN_APP, callback_data="open_app")]
                 ]
             )
             
             await message.answer(
-                BotMessages.WELCOME_MESSAGE,
+                BotMessages.WELCOME_MESSAGE.format(balance=user.balance),
                 reply_markup=welcome_keyboard
             )
         else:
@@ -47,20 +49,3 @@ async def handle_start_command(message: Message, state: FSMContext):
         await message.answer(BotMessages.ERROR_OCCURRED)
 
 
-@router.callback_query(F.data == "start_bot")
-async def handle_start_bot_callback(callback_query, state: FSMContext):
-    try:
-        await callback_query.answer()
-        await callback_query.message.edit_text(
-            BotMessages.WELCOME_MESSAGE,
-            reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[
-                    [InlineKeyboardButton(text=BotMessages.BUY_MESSAGES, callback_data="buy_messages")],
-                    [InlineKeyboardButton(text=BotMessages.INVITE_FRIEND, callback_data="invite_friend")],
-                    [InlineKeyboardButton(text=BotMessages.OPEN_APP, callback_data="open_app")]
-                ]
-            )
-        )
-    except Exception as e:
-        print(f"Error in callback handler: {e}")
-        await callback_query.answer(BotMessages.ERROR_OCCURRED)
